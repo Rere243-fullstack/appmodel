@@ -1,0 +1,120 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Home container */
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Profile Card */
+.profile-card {
+  text-align: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.profile-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.profile-card h2 {
+  margin-bottom: 0.5rem;
+}
+.profile-card p {
+  color: #777;
+}
+
+/* Actions (like/dislike) */
+.actions {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.actions button {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50%;
+  background: #eee;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.actions button:hover {
+  transform: scale(1.1);
+}
+.like {
+  background: #c1f7c4;
+}
+.dislike {
+  background: #fddede;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+.bottom-nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .home {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .profile-card {
+    max-width: 350px;
+  }
+}
+
+
+/* Animation Like/Dislike */
+.liked {
+  animation: likeFlash 1.5s ease;
+}
+.disliked {
+  animation: dislikeShake 0.5s ease;
+}
+
+@keyframes likeFlash {
+  0% { background-color: #c1f7c4; }
+  100% { background-color: white; }
+}
+
+@keyframes dislikeShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

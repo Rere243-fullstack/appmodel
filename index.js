@@ -21,7 +21,7 @@ dislikeBtn.addEventListener('click', () => {
   }, 500)
 })
 
-// Affiche un message quand on clique sur un profil
+// Affiche un message quand on clique sur un profil matches page
 document.querySelectorAll('.messages li').forEach(item => {
   item.addEventListener('click', () => {
     const name = item.querySelector('strong').textContent
@@ -39,7 +39,7 @@ document.querySelectorAll('.avatars img').forEach(img => {
   })
 })
 
-// Redirection vers la page de détails de l’événement
+// Redirection vers la page de détails de l’événement  event page
 document.querySelectorAll('.event-card').forEach(card => {
   card.addEventListener('click', () => {
     const eventId = card.dataset.id || '1'  // Si tu veux gérer plusieurs fiches plus tard
@@ -63,4 +63,16 @@ document.querySelectorAll('.badge.danger').forEach(badge => {
     badge.style.opacity = badge.style.opacity === '0.5' ? '1' : '0.5'
   }, 600)
 })
+
+//formulaire
+document.addEventListener('DOMContentLoaded', () => {
+  const participateBtn = document.querySelector('.btn-participate');
+  const form = document.querySelector('.registration-form');
+
+  if (participateBtn && form) {
+    participateBtn.addEventListener('click', () => {
+      form.classList.toggle('hidden');
+    });
+  }
+});
 

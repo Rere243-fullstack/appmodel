@@ -21,7 +21,6 @@ dislikeBtn.addEventListener('click', () => {
   }, 500)
 })
 
-
 // Affiche un message quand on clique sur un profil
 document.querySelectorAll('.messages li').forEach(item => {
   item.addEventListener('click', () => {

@@ -1,0 +1,6 @@
+Que fait ce code ?
+Quand tu cliques sur un des deux boutons, on ajoute une classe CSS temporaire à la carte (.liked ou .disliked)
+
+Cela déclenche une animation CSS
+
+Après 500 millisecondes, on retire la classe pour que l’animation puisse se rejouer plus tard.

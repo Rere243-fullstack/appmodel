@@ -38,3 +38,29 @@ document.querySelectorAll('.avatars img').forEach(img => {
     img.style.borderColor = '#ddd'
   })
 })
+
+// Redirection vers la page de détails de l’événement
+document.querySelectorAll('.event-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const eventId = card.dataset.id || '1'  // Si tu veux gérer plusieurs fiches plus tard
+    window.location.href = `event-details.html?id=${eventId}`
+  })
+
+  // Petite animation de survol
+  card.addEventListener('mouseover', () => {
+    card.style.transform = 'scale(1.02)'
+    card.style.transition = '0.3s'
+  })
+
+  card.addEventListener('mouseout', () => {
+    card.style.transform = 'scale(1)'
+  })
+})
+
+// Effet clignotant sur les badges "Annulé"
+document.querySelectorAll('.badge.danger').forEach(badge => {
+  setInterval(() => {
+    badge.style.opacity = badge.style.opacity === '0.5' ? '1' : '0.5'
+  }, 600)
+})
+

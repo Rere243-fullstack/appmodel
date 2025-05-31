@@ -6,7 +6,7 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
+  background: #aeefb8;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -168,13 +168,92 @@ body {
   right: 1rem;
   top: 1rem;
 }
+/* Events*/
+.event-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:  4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  background: white;
+}
 
-/* Responsive (small screen) */
-@media (max-width: 600px) {
-  .messages li {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+.event-card img {
+  width: 100%;
+  height: 180%;
+  object-fit: cover;
+}
+
+.event-card h3 {
+  margin: 0.5rem 1rem 0 1rem;
+}
+
+.event-card p {
+  margin: 0.2rem 1rem;
+  color: #555;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.badge.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.badge.danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.event-details {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.event-details img {
+  width: 100px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.event-info {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.event-info h1 {
+  margin-bottom: 0.5rem;
+}
+
+.event-info p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.btn-participate {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-participate:hover {
+  background: #43a047;
 }
 
 
@@ -186,6 +265,9 @@ body {
   }
   .profile-card {
     max-width: 350px;
+  }
+  .messages li {
+    align-items: flex-start;
   }
 }
 
